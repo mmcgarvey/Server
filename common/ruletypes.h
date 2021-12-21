@@ -410,6 +410,12 @@ RULE_INT(Spells, ClericInnateHealFocus, 5, "Clerics on live get a 5 pct innate h
 RULE_BOOL(Spells, DOTsScaleWithSpellDmg, false, "Allow SpellDmg stat to affect DoT spells")
 RULE_BOOL(Spells, HOTsScaleWithHealAmt, false, "Allow HealAmt stat to affect HoT spells")
 RULE_BOOL(Spells, CompoundLifetapHeals, true, "True: Lifetap heals calculate damage bonuses and then heal bonuses.  False:  Lifetaps heal using the amount damaged to mob.")
+RULE_BOOL(Spells, EnableDOTDurationBonusSpread, true, "True:  Full bonuses are divided over duration of DOT ticks.  False:  Full bonuses are applied to every tick.")
+RULE_BOOL(Spells, EnableHOTDurationBonusSpread, true, "True:  Full bonuses are divided over duration of HOT ticks.  False:  Full bonuses are applied to every tick.")
+RULE_INT(Spells, DOTBonusPerTickPctMinimum, 100, "If EnableDOTDurationBonusSpread is false, apply a modifier between DOTBonusPerTickMultiplierMinimum and DOTBonusPerTickMultiplierMaximum")
+RULE_INT(Spells, DOTBonusPerTickPctMaximum, 100, "If EnableDOTDurationBonusSpread is false, apply a modifier between DOTBonusPerTickMultiplierMinimum and DOTBonusPerTickMultiplierMaximum")
+RULE_INT(Spells, HOTBonusPerTickPctMinimum, 100, "If EnableHOTDurationBonusSpread is false, apply a modifier between HOTBonusPerTickMultiplierMinimum and HOTBonusPerTickMultiplierMaximum")
+RULE_INT(Spells, HOTBonusPerTickPctMaximum, 100, "If EnableHOTDurationBonusSpread is false, apply a modifier between HOTBonusPerTickMultiplierMinimum and HOTBonusPerTickMultiplierMaximum")
 RULE_CATEGORY_END()
 
 RULE_CATEGORY(Combat)
